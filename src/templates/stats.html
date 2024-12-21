@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Squid</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="flex justify-between items-center px-6 py-3 w-full">
+        <h1 class="text-3xl font-bold ">Squid Graph</h1>
+        <div>
+            <button class="outline-none bg-green-500 px-3 py-1 rounded-md">Reload data</button>
+        </div>
+    </header>
+    <main class="flex flex-colummn p-3 w-screen border-blue-200">
+        <section class="border-2 w-[50rem] ">
+            <canvas class="w-full" id="myChart"></canvas>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"
+        integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js' ) }}"></script>
+</body>
+
+</html>
